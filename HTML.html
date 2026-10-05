@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>草叢裡的「無聲隱者」｜里山野地蛇類生態與智慧共存地圖</title>
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Noto Sans TC', sans-serif;
+    }
+    .bg-forest {
+      background-color: #121e17;
+    }
+  </style>
+</head>
+<body class="bg-gray-900 text-gray-100 min-h-screen flex flex-col selection:bg-emerald-500 selection:text-white">
+
+  <!-- 導覽列 -->
+  <nav class="sticky top-0 z-50 bg-gray-900/90 backdrop-blur border-b border-gray-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+      <div class="flex items-center space-x-3">
+        <i class="fa-solid fa-staff-snake text-emerald-400 text-2xl"></i>
+        <span class="font-bold text-lg tracking-wide text-white">草叢裡的「無聲隱者」</span>
+      </div>
+      <div class="hidden md:flex space-x-6 text-sm font-medium">
+        <a href="#about" class="hover:text-emerald-400 transition">關於蛇類</a>
+        <a href="#species" class="hover:text-emerald-400 transition">常見蛇類</a>
+        <a href="#safety" class="hover:text-emerald-400 transition">遭遇防護</a>
+        <a href="#report" class="hover:text-emerald-400 transition">通報地圖</a>
+        <a href="#quiz" class="hover:text-emerald-400 transition">知識測驗</a>
+      </div>
+      <a href="#report" class="bg-emerald-600 hover:bg-emerald-500 text-white px-4 py-2 rounded-lg text-sm font-semibold transition shadow-lg shadow-emerald-900/40">
+        <i class="fa-solid fa-location-dot mr-1.5"></i>目擊通報
+      </a>
+    </div>
+  </nav>
+
+  <!-- Hero 英雄區 -->
+  <header id="about" class="relative bg-forest overflow-hidden py-20 lg:py-28 border-b border-emerald-900/40">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+      <div class="lg:col-span-7 space-y-6">
+        <div class="inline-flex items-center space-x-2 bg-emerald-950/80 border border-emerald-700/50 px-3 py-1.5 rounded-full text-emerald-300 text-xs font-semibold">
+          <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+          <span>臺灣里山蛇類生態公民科學網絡</span>
+        </div>
+        <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-white tracking-tight leading-tight">
+          草叢里的「無聲隱者」
+        </h1>
+        <p class="text-lg sm:text-xl text-emerald-200/90 font-light leading-relaxed">
+          解碼無聲的生態脈搏：里山野地蛇類生態與智慧共存地圖
+        </p>
+        <p class="text-gray-400 text-sm leading-relaxed max-w-2xl">
+          蛇類是里山生態系中關鍵的中階掠食者，維系著鼠類與害蟲的族群平衡。讓我們放下恐懼，以科學視角理解這位「無聲隱者」，共同建構友善健康的里山生態網絡。
+        </p>
+        <div class="flex flex-wrap gap-4 pt-2">
+          <a href="#report" class="bg-emerald-600 hover:bg-emerald-500 text-white px-6 py-3 rounded-lg font-semibold transition shadow-lg shadow-emerald-900/50 flex items-center">
+            <i class="fa-solid fa-paper-plane mr-2"></i>即時回報目擊
+          </a>
+          <a href="#safety" class="bg-gray-800 hover:bg-gray-700 text-emerald-300 border border-emerald-800/60 px-6 py-3 rounded-lg font-semibold transition flex items-center">
+            <i class="fa-solid fa-shield-halved mr-2"></i>遇蛇安全守則
+          </a>
+        </div>
+      </div>
+      <!-- 首頁英雄大圖 -->
+      <div class="lg:col-span-5">
+        <div class="relative rounded-2xl overflow-hidden border border-emerald-700/40 shadow-2xl group">
+          <img src="watermarked_img_12525057469027790731.jpg" alt="台灣野生蛇類" class="w-full h-[380px] object-cover group-hover:scale-105 transition duration-700" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1531386151447-fd76ad50012f?auto=format&fit=crop&w=1200&q=80';">
+          <div class="absolute inset-0 bg-gradient-to-t from-gray-950 via-transparent to-transparent"></div>
+          <div class="absolute bottom-4 left-4 right-4 text-xs text-gray-300 bg-gray-900/80 backdrop-blur p-3 rounded-lg border border-gray-700/50 flex items-center justify-between">
+            <span><i class="fa-solid fa-camera text-emerald-400 mr-1.5"></i>棲息於里山竹林中的無聲隱者</span>
+            <span class="text-emerald-400 font-mono text-[10px]">TAIWAN WILDLIFE</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- 常見蛇類圖鑑區 (去圖片文字卡片) -->
+  <section id="species" class="py-16 bg-gray-950 border-b border-gray-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-3xl mx-auto mb-12">
+        <h2 class="text-3xl font-bold text-white mb-3 flex items-center justify-center gap-2">
+          <i class="fa-solid fa-book-bookmark text-emerald-400"></i>臺灣常見蛇類特徵與生態
+        </h2>
+        <p class="text-gray-400 text-sm">透過外部特徵與生態習性，快速認識台灣里山野地常見的無聲隱者。</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <!-- 赤尾青竹絲 -->
+        <div class="bg-gray-900 border border-gray-800 rounded-xl p-6 hover:border-emerald-600/50 transition shadow-lg flex flex-col justify-between">
+          <div>
+            <div class="w-12 h-12 rounded-lg bg-emerald-950 border border-emerald-700/50 flex items-center justify-center text-emerald-400 text-2xl mb-4">
+              <i class="fa-solid fa-leaf"></i>
+            </div>
+            <div class="flex items-center justify-between mb-2">
+              <h3 class="text-xl font-bold text-white">赤尾青竹絲</h3>
+              <span class="bg-red-950 text-red-300 border border-red-800/50 text-[10px] px-2 py-0.5 rounded font-medium">出血性毒</span>
+            </div>
+            <p class="text-xs text-gray-400 mb-4 font-mono">Trimeresurus stejnegeri</p>
+            <ul class="text-xs text-gray-300 space-y-2 mb-4">
+              <li class="flex items-start"><i class="fa-solid fa-check text-emerald-400 mt-0.5 mr-2"></i>翠綠色身體，尾端呈現明顯磚紅色。</li>
+              <li class="flex items-start"><i class="fa-solid fa-check text-emerald-400 mt-0.5 mr-2"></i>頭部呈明顯三角形，體側通常有白線。</li>
+              <li class="flex items-start"><i class="fa-solid fa-check text-emerald-400 mt-0.5 mr-2"></i>夜行性，常棲息於灌木叢與溪流附近。</li>
+            </ul>
+          </div>
+          <div class="pt-3 border-t border-gray-800 text-[11px] text-emerald-400">
+            <i class="fa-solid fa-triangle-exclamation mr-1"></i>全台數量最多之常見毒蛇
+          </div>
+        </div>
+
+        <!-- 龜殼花 -->
+        <div class="bg-gray-900 border border-gray-800 rounded-xl p-6 hover:border-emerald-600/50 transition shadow-lg flex flex-col justify-between">
+          <div>
+            <div class="w-12 h-12 rounded-lg bg-emerald-950 border border-emerald-700/50 flex items-center justify-center text-emerald-400 text-2xl mb-4">
+              <i class="fa-solid fa-shield"></i>
+            </div>
+            <div class="flex items-center justify-between mb-2">
+              <h3 class="text-xl font-bold text-white">龜殼花</h3>
+              <span class="bg-red-950 text-red-300 border border-red-800/50 text-[10px] px-2 py-0.5 rounded font-medium">出血性毒</span>
+            </div>
+            <p class="text-xs text-gray-400 mb-4 font-mono">Protobothrops mucrosquamatus</p>
+            <ul class="text-xs text-gray-300 space-y-2 mb-4">
+              <li class="flex items-start"><i class="fa-solid fa-check text-emerald-400 mt-0.5 mr-2"></i>背部有龜甲狀的暗褐色波浪斑紋。</li>
+              <li class="flex items-start"><i class="fa-solid fa-check text-emerald-400 mt-0.5 mr-2"></i>頭部大呈寬大三角形，頸部細小。</li>
+              <li class="flex items-start"><i class="fa-solid fa-check text-emerald-400 mt-0.5 mr-2"></i>喜棲息於農田、廢棄房屋與山區步道。</li>
+            </ul>
+          </div>
+          <div class="pt-3 border-t border-gray-800 text-[11px] text-emerald-400">
+            <i class="fa-solid fa-triangle-exclamation mr-1"></i>防衛性較強，切勿靠近刺激
+          </div>
+        </div>
+
+        <!-- 百步蛇 -->
+        <div class="bg-gray-900 border border-gray-800 rounded-xl p-6 hover:border-emerald-600/50 transition shadow-lg flex flex-col justify-between">
+          <div>
+            <div class="w-12 h-12 rounded-lg bg-emerald-950 border border-emerald-700/50 flex items-center justify-center text-emerald-400 text-2xl mb-4">
+              <i class="fa-solid fa-mountain"></i>
+            </div>
+            <div class="flex items-center justify-between mb-2">
+              <h3 class="text-xl font-bold text-white">百步蛇</h3>
+              <span class="bg-red-950 text-red-300 border border-red-800/50 text-[10px] px-2 py-0.5 rounded font-medium">出血性毒</span>
+            </div>
+            <p class="text-xs text-gray-400 mb-4 font-mono">Deinagkistrodon acutus</p>
+            <ul class="text-xs text-gray-300 space-y-2 mb-4">
+              <li class="flex items-start"><i class="fa-solid fa-check text-emerald-400 mt-0.5 mr-2"></i>吻端明顯向上突出（翹鼻）。</li>
+              <li class="flex items-start"><i class="fa-solid fa-check text-emerald-400 mt-0.5 mr-2"></i>體側具連續黑褐色三角形斑紋。</li>
+              <li class="flex items-start"><i class="fa-solid fa-check text-emerald-400 mt-0.5 mr-2"></i>原住民族文化神聖符號，保育類野生動物。</li>
+            </ul>
+          </div>
+          <div class="pt-3 border-t border-gray-800 text-[11px] text-emerald-400">
+            <i class="fa-solid fa-crown mr-1"></i>珍貴稀有二級保育類
+          </div>
+        </div>
+
+        <!-- 雨傘節 -->
+        <div class="bg-gray-900 border border-gray-800 rounded-xl p-6 hover:border-emerald-600/50 transition shadow-lg flex flex-col justify-between">
+          <div>
+            <div class="w-12 h-12 rounded-lg bg-emerald-950 border border-emerald-700/50 flex items-center justify-center text-emerald-400 text-2xl mb-4">
+              <i class="fa-solid fa-circle-nodes"></i>
+            </div>
+            <div class="flex items-center justify-between mb-2">
+              <h3 class="text-xl font-bold text-white">雨傘節</h3>
+              <span class="bg-amber-950 text-amber-300 border border-amber-800/50 text-[10px] px-2 py-0.5 rounded font-medium">神經性毒</span>
+            </div>
+            <p class="text-xs text-gray-400 mb-4 font-mono">Bungarus multicinctus</p>
+            <ul class="text-xs text-gray-300 space-y-2 mb-4">
+              <li class="flex items-start"><i class="fa-solid fa-check text-emerald-400 mt-0.5 mr-2"></i>身體具黑白相間的極明顯環紋。</li>
+              <li class="flex items-start"><i class="fa-solid fa-check text-emerald-400 mt-0.5 mr-2"></i>頭部呈橢圓形，性情極度害羞怯弱。</li>
+              <li class="flex items-start"><i class="fa-solid fa-check text-emerald-400 mt-0.5 mr-2"></i>夜間常於水田、溝渠附近活動。</li>
+            </ul>
+          </div>
+          <div class="pt-3 border-t border-gray-800 text-[11px] text-emerald-400">
+            <i class="fa-solid fa-shield-cat mr-1"></i>性格害羞，受威脅才咬人
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 遭遇防護守則 -->
+  <section id="safety" class="py-16 bg-gray-900 border-b border-gray-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-3xl mx-auto mb-12">
+        <h2 class="text-3xl font-bold text-white mb-3 flex items-center justify-center gap-2">
+          <i class="fa-solid fa-user-shield text-emerald-400"></i>野地遇蛇防範與「五要五不」
+        </h2>
+        <p class="text-gray-400 text-sm">蛇類通常不會主動攻擊人類，遵循正確的安全指引即可和平共處。</p>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+        <!-- 急救五要 -->
+        <div class="bg-emerald-950/30 border border-emerald-800/50 rounded-xl p-6">
+          <h3 class="text-xl font-bold text-emerald-300 mb-4 flex items-center">
+            <i class="fa-solid fa-circle-check text-emerald-400 mr-2 text-2xl"></i>遭遇咬傷「五要」原則
+          </h3>
+          <ul class="space-y-3 text-sm text-gray-200">
+            <li class="flex items-start"><span class="bg-emerald-800 text-white w-6 h-6 rounded-full flex items-center justify-center text-xs font-bold mr-3 shrink-0">1</span><strong>要冷靜：</strong>保持鎮定，減緩心跳與血液循環。</li>
+            <li class="flex items-start"><span class="bg-emerald-800 text-white w-6 h-6 rounded-full flex items-center justify-center text-xs font-bold mr-3 shrink-0">2</span><strong>要記住：</strong>記住蛇類特徵（顏色、形狀、花紋）。</li>
+            <li class="flex items-start"><span class="bg-emerald-800 text-white w-6 h-6 rounded-full flex items-center justify-center text-xs font-bold mr-3 shrink-0">3</span><strong>要脫飾品：</strong>儘速脫下戒指、手鐲等束縛物防止腫脹。</li>
+            <li class="flex items-start"><span class="bg-emerald-800 text-white w-6 h-6 rounded-full flex items-center justify-center text-xs font-bold mr-3 shrink-0">4</span><strong>要包紮：</strong>包紮傷口近心端（保持低於心臟高度）。</li>
+            <li class="flex items-start"><span class="bg-emerald-800 text-white w-6 h-6 rounded-full flex items-center justify-center text-xs font-bold mr-3 shrink-0">5</span><strong>要送醫：</strong>儘速撥打 119 通報並送往醫院注射血清。</li>
+          </ul>
+        </div>
+
+        <!-- 迷思五不 -->
+        <div class="bg-red-950/30 border border-red-900/50 rounded-xl p-6">
+          <h3 class="text-xl font-bold text-red-300 mb-4 flex items-center">
+            <i class="fa-solid fa-circle-xmark text-red-400 mr-2 text-2xl"></i>切勿嘗試「五不」誤區
+          </h3>
+          <ul class="space-y-3 text-sm text-gray-200">
+            <li class="flex items-start"><span class="bg-red-800 text-white w-6 h-6 rounded-full flex items-center justify-center text-xs font-bold mr-3 shrink-0">1</span><strong>不割開：</strong>切勿割開傷口吸血，避免引發二次感染。</li>
+            <li class="flex items-start"><span class="bg-red-800 text-white w-6 h-6 rounded-full flex items-center justify-center text-xs font-bold mr-3 shrink-0">2</span><strong>不用嘴吸：</strong>切勿用口吸出毒液，避免口腔黏膜吸收。</li>
+            <li class="flex items-start"><span class="bg-red-800 text-white w-6 h-6 rounded-full flex items-center justify-center text-xs font-bold mr-3 shrink-0">3</span><strong>不冰敷：</strong>切勿冰敷或燒灼傷口，可能造成組織壞死。</li>
+            <li class="flex items-start"><span class="bg-red-800 text-white w-6 h-6 rounded-full flex items-center justify-center text-xs font-bold mr-3 shrink-0">4</span><strong>不綁太緊：</strong>切勿用止血帶緊綁導致肢體缺血坏死。</li>
+            <li class="flex items-start"><span class="bg-red-800 text-white w-6 h-6 rounded-full flex items-center justify-center text-xs font-bold mr-3 shrink-0">5</span><strong>不打蛇：</strong>切勿嘗試捕捉或打死蛇，增加被二次咬傷風險。</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 回報與地圖區 (GAS 整合) -->
+  <section id="report" class="py-16 bg-gray-950 border-b border-gray-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-3xl mx-auto mb-10">
+        <h2 class="text-3xl font-bold text-white mb-3 flex items-center justify-center gap-2">
+          <i class="fa-solid fa-map-location-dot text-emerald-400"></i>全台蛇類目擊即時回報系統
+        </h2>
+        <p class="text-gray-400 text-sm">透過公民科學回報，協助建立里山蛇類生態分布地圖。</p>
+      </div>
+
+      <!-- GAS 網址設定盒 -->
+      <div class="bg-gray-900 border border-emerald-800/60 rounded-xl p-4 mb-8 max-w-3xl mx-auto">
+        <label class="block text-xs font-bold text-emerald-400 mb-2 uppercase tracking-wider">
+          <i class="fa-solid fa-link mr-1"></i> Google Apps Script (GAS) Web App API 網址設定
+        </label>
+        <div class="flex gap-2">
+          <input type="text" id="gasUrlInput" placeholder="https://script.google.com/macros/s/.../exec" class="flex-1 bg-gray-950 border border-gray-700 rounded-lg px-3 py-2 text-xs text-white focus:outline-none focus:border-emerald-500">
+          <button onclick="saveGasUrl()" class="bg-emerald-700 hover:bg-emerald-600 text-white px-4 py-2 rounded-lg text-xs font-semibold transition">儲存設定</button>
+        </div>
+        <p id="gasStatus" class="text-[11px] text-gray-400 mt-1.5">貼上 Apps Script 部署網址後，通報資料將同步寫入您的 Google 試算表。</p>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
+        <!-- 填寫表單 -->
+        <div class="lg:col-span-5 bg-gray-900 border border-gray-800 rounded-xl p-6 shadow-xl">
+          <h3 class="text-lg font-bold text-white mb-4 flex items-center">
+            <i class="fa-solid fa-pen-to-square text-emerald-400 mr-2"></i>新增目擊紀錄
+          </h3>
+          <form id="sightingForm" onsubmit="handleFormSubmit(event)" class="space-y-4">
+            <div>
+              <label class="block text-xs font-medium text-gray-300 mb-1">目擊縣市</label>
+              <select id="countySelect" required class="w-full bg-gray-950 border border-gray-800 rounded-lg px-3 py-2 text-sm text-white focus:border-emerald-500 focus:outline-none">
+                <option value="">請選擇縣市</option>
+                <option value="花蓮縣">花蓮縣</option>
+                <option value="臺東縣">臺東縣</option>
+                <option value="南投縣">南投縣</option>
+                <option value="宜蘭縣">宜蘭縣</option>
+                <option value="新北市">新北市</option>
+                <option value="臺中市">臺中市</option>
+                <option value="高雄市">高雄市</option>
+                <option value="屏東縣">屏東縣</option>
+              </select>
+            </div>
+            <div>
+              <label class="block text-xs font-medium text-gray-300 mb-1">目擊日期與時間</label>
+              <input type="datetime-local" id="timeInput" required class="w-full bg-gray-950 border border-gray-800 rounded-lg px-3 py-2 text-sm text-white focus:border-emerald-500 focus:outline-none">
+            </div>
+            <div>
+              <label class="block text-xs font-medium text-gray-300 mb-1">詳細地點 / GPS 座標</label>
+              <input type="text" id="locationInput" placeholder="例如：大坑步道 2號步道 500m 處" required class="w-full bg-gray-950 border border-gray-800 rounded-lg px-3 py-2 text-sm text-white focus:border-emerald-500 focus:outline-none">
+            </div>
+            <div>
+              <label class="block text-xs font-medium text-gray-300 mb-1">目擊蛇種 / 類型</label>
+              <select id="typeSelect" required class="w-full bg-gray-950 border border-gray-800 rounded-lg px-3 py-2 text-sm text-white focus:border-emerald-500 focus:outline-none">
+                <option value="赤尾青竹絲">赤尾青竹絲</option>
+                <option value="龜殼花">龜殼花</option>
+                <option value="百步蛇">百步蛇</option>
+                <option value="雨傘節">雨傘節</option>
+                <option value="無毒蛇類（如臭青母、錦蛇）">無毒蛇類（如臭青母、錦蛇）</option>
+                <option value="無法辨識蛇種">無法辨識蛇種</option>
+                <option value="蛻皮 / 痕跡">蛻皮 / 痕跡</option>
+              </select>
+            </div>
+            <div>
+              <label class="block text-xs font-medium text-gray-300 mb-1">描述與備註</label>
+              <textarea id="descInput" rows="3" placeholder="請簡述蛇類行為、體長估計或周邊環境..." class="w-full bg-gray-950 border border-gray-800 rounded-lg px-3 py-2 text-sm text-white focus:border-emerald-500 focus:outline-none"></textarea>
+            </div>
+            <button type="submit" id="submitBtn" class="w-full bg-emerald-600 hover:bg-emerald-500 text-white font-bold py-2.5 rounded-lg transition flex items-center justify-center shadow-lg shadow-emerald-950">
+              <i class="fa-solid fa-paper-plane mr-2"></i>送出目擊通報
+            </button>
+          </form>
+        </div>
+
+        <!-- 列表與動態 -->
+        <div class="lg:col-span-7 space-y-4">
+          <!-- 縣市過濾器 -->
+          <div class="flex flex-wrap gap-2 pb-2">
+            <button onclick="filterRecords('ALL')" class="filter-btn active bg-emerald-700 text-white px-3 py-1 rounded-full text-xs font-medium">全部縣市</button>
+            <button onclick="filterRecords('花蓮縣')" class="filter-btn bg-gray-800 text-gray-300 px-3 py-1 rounded-full text-xs font-medium hover:bg-gray-700">花蓮</button>
+            <button onclick="filterRecords('臺東縣')" class="filter-btn bg-gray-800 text-gray-300 px-3 py-1 rounded-full text-xs font-medium hover:bg-gray-700">臺東</button>
+            <button onclick="filterRecords('南投縣')" class="filter-btn bg-gray-800 text-gray-300 px-3 py-1 rounded-full text-xs font-medium hover:bg-gray-700">南投</button>
+            <button onclick="filterRecords('宜蘭縣')" class="filter-btn bg-gray-800 text-gray-300 px-3 py-1 rounded-full text-xs font-medium hover:bg-gray-700">宜蘭</button>
+            <button onclick="filterRecords('新北市')" class="filter-btn bg-gray-800 text-gray-300 px-3 py-1 rounded-full text-xs font-medium hover:bg-gray-700">新北</button>
+          </div>
+
+          <!-- 通報卡片容器 -->
+          <div id="recordsContainer" class="space-y-3 max-h-[460px] overflow-y-auto pr-1">
+            <!-- 動態填入 -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 知識小測驗 -->
+  <section id="quiz" class="py-16 bg-gray-900 border-b border-gray-800">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6">
+      <div class="text-center mb-8">
+        <h2 class="text-3xl font-bold text-white mb-2 flex items-center justify-center gap-2">
+          <i class="fa-solid fa-graduation-cap text-emerald-400"></i>里山蛇類生態小測驗
+        </h2>
+        <p class="text-gray-400 text-sm">測試您的蛇類保育與安全防護常識！</p>
+      </div>
+
+      <div id="quizContainer" class="bg-gray-950 border border-gray-800 rounded-2xl p-6 sm:p-8 shadow-2xl">
+        <!-- JS 動態渲染問答 -->
+      </div>
+    </div>
+  </section>
+
+  <!-- 頁尾聲明與緊急專線 -->
+  <footer class="bg-gray-950 text-gray-400 text-xs py-10 border-t border-gray-800 mt-auto">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-3 gap-8">
+      <div>
+        <div class="flex items-center space-x-2 text-white font-bold text-sm mb-3">
+          <i class="fa-solid fa-staff-snake text-emerald-400"></i>
+          <span>草叢裡的「無聲隱者」</span>
+        </div>
+        <p class="leading-relaxed text-gray-400">
+          本平台致力於推廣台灣蛇類生態教育與里山智慧共存理念。圖片與資料均遵循網頁規範，頁首照片來源為 Unsplash 野生動物資料庫。
+        </p>
+      </div>
+      <div>
+        <h4 class="text-white font-semibold text-sm mb-3">野生動物緊急救援與通報專線</h4>
+        <ul class="space-y-2">
+          <li><i class="fa-solid fa-phone text-emerald-400 mr-2"></i>緊急傷患與咬傷救護：<strong class="text-white">119</strong></li>
+          <li><i class="fa-solid fa-phone text-emerald-400 mr-2"></i>林業及自然保育署：<strong class="text-white">0800-000-930</strong></li>
+          <li><i class="fa-solid fa-phone text-emerald-400 mr-2"></i>縣市政府市民專線：<strong class="text-white">1999</strong></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="text-white font-semibold text-sm mb-3">智慧共存理念</h4>
+        <p class="leading-relaxed">
+          「打草驚蛇」是走入野地最好的保護色。保持適當距離（1.5公尺以上），蛇類便不會主動攻擊。讓我們一起成為里山生態的守護者。
+        </p>
+      </div>
+    </div>
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-8 mt-8 border-t border-gray-900 text-center text-gray-500">
+      &copy; 2026 草叢里的「無聲隱者」 Satoyama Snake Ecology Network. All rights reserved.
+    </div>
+  </footer>
+
+  <!-- JavaScript 邏輯控制 -->
+  <script>
+    // 預設資料
+    const defaultRecords = [
+      { id: 1, county: '花蓮縣', time: '2026-10-02 14:30', location: '太魯閣國家公園步道 1K 處', type: '百步蛇', description: '於步道邊緣岩石休息，體長約 80 公分，未影響遊客通行。' },
+      { id: 2, county: '南投縣', time: '2026-10-04 19:10', location: '魚池鄉農路邊溝渠', type: '赤尾青竹絲', description: '棲息於低矮灌木枝條上，身體呈鮮豔翠綠色，尾端磚紅。' },
+      { id: 3, county: '新北市', time: '2026-10-05 09:15', location: '三峽區里山步道', type: '龜殼花', description: '橫過步道入草叢，無威脅行為。' }
+    ];
+
+    let records = JSON.parse(localStorage.getItem('snake_records')) || defaultRecords;
+    let currentFilter = 'ALL';
+
+    // 載入與初始化
+    document.addEventListener('DOMContentLoaded', () => {
+      const savedGasUrl = localStorage.getItem('snake_gas_url') || '';
+      document.getElementById('gasUrlInput').value = savedGasUrl;
+      if (savedGasUrl) {
+        document.getElementById('gasStatus').innerText = '✅ 已載入已儲存的 Google Apps Script API 網址';
+        document.getElementById('gasStatus').classList.add('text-emerald-400');
+      }
+      renderRecords();
+      initQuiz();
+    });
+
+    // 儲存 GAS URL
+    function saveGasUrl() {
+      const url = document.getElementById('gasUrlInput').value.trim();
+      localStorage.setItem('snake_gas_url', url);
+      const statusEl = document.getElementById('gasStatus');
+      if (url) {
+        statusEl.innerText = '✅ API 網址已設定並儲存至 LocalStorage！';
+        statusEl.className = 'text-[11px] text-emerald-400 mt-1.5';
+      } else {
+        statusEl.innerText = '⚠️ 已清除 API 網址，通報將僅儲存在本地瀏覽器。';
+        statusEl.className = 'text-[11px] text-amber-400 mt-1.5';
+      }
+    }
+
+    // 渲染紀錄
+    function renderRecords() {
+      const container = document.getElementById('recordsContainer');
+      container.innerHTML = '';
+
+      const filtered = currentFilter === 'ALL' 
+        ? records 
+        : records.filter(r => r.county === currentFilter);
+
+      if (filtered.length === 0) {
+        container.innerHTML = `
+          <div class="bg-gray-900 border border-gray-800 rounded-xl p-8 text-center text-gray-500">
+            <i class="fa-solid fa-inbox text-3xl mb-2"></i>
+            <p class="text-sm">該縣市目前尚無目擊回報紀錄。</p>
+          </div>`;
+        return;
+      }
+
+      filtered.forEach(item => {
+        const card = document.createElement('div');
+        card.className = 'bg-gray-900 border border-gray-800 hover:border-gray-700 rounded-xl p-4 transition shadow-md';
+        card.innerHTML = `
+          <div class="flex items-center justify-between mb-2">
+            <div class="flex items-center space-x-2">
+              <span class="bg-emerald-950 text-emerald-300 border border-emerald-800 px-2.5 py-0.5 rounded-full text-xs font-bold">${item.county}</span>
+              <span class="text-white font-bold text-sm">${item.type}</span>
+            </div>
+            <span class="text-[11px] text-gray-400"><i class="fa-regular fa-clock mr-1"></i>${item.time}</span>
+          </div>
+          <p class="text-xs text-gray-300 mb-1"><i class="fa-solid fa-location-dot text-emerald-400 mr-1.5"></i><strong>地點：</strong>${item.location}</p>
+          <p class="text-xs text-gray-400 leading-relaxed"><i class="fa-solid fa-comment-dots text-gray-500 mr-1.5"></i>${item.description}</p>
+        `;
+        container.appendChild(card);
+      });
+    }
+
+    // 過濾篩選
+    function filterRecords(county) {
+      currentFilter = county;
+      document.querySelectorAll('.filter-btn').forEach(btn => {
+        if (btn.innerText.includes(county) || (county === 'ALL' && btn.innerText === '全部縣市')) {
+          btn.className = 'filter-btn active bg-emerald-700 text-white px-3 py-1 rounded-full text-xs font-medium';
+        } else {
+          btn.className = 'filter-btn bg-gray-800 text-gray-300 px-3 py-1 rounded-full text-xs font-medium hover:bg-gray-700';
+        }
+      });
+      renderRecords();
+    }
+
+    // 表單提交處理
+    async function handleFormSubmit(e) {
+      e.preventDefault();
+      const btn = document.getElementById('submitBtn');
+      btn.disabled = true;
+      btn.innerHTML = `<i class="fa-solid fa-spinner animate-spin mr-2"></i>資料傳送中...`;
+
+      const newRecord = {
+        id: Date.now(),
+        county: document.getElementById('countySelect').value,
+        time: document.getElementById('timeInput').value.replace('T', ' '),
+        location: document.getElementById('locationInput').value,
+        type: document.getElementById('typeSelect').value,
+        description: document.getElementById('descInput').value || '無詳細描述'
+      };
+
+      // 儲存至 LocalStorage
+      records.unshift(newRecord);
+      localStorage.setItem('snake_records', JSON.stringify(records));
+
+      // 若有 GAS API 網址，發送 POST 請求
+      const gasUrl = localStorage.getItem('snake_gas_url');
+      if (gasUrl) {
+        try {
+          await fetch(gasUrl, {
+            method: 'POST',
+            mode: 'no-cors',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(newRecord)
+          });
+          alert('通報成功！資料已成功同步至 Google 試算表與本地網頁紀錄。');
+        } catch (err) {
+          console.error(err);
+          alert('本地紀錄成功，但發送至 Google 試算表時發生錯誤。');
+        }
+      } else {
+        alert('目擊通報已新增至網頁紀錄！（若欲同步試算表，請先於上方填入 Apps Script 網址）');
+      }
+
+      document.getElementById('sightingForm').reset();
+      btn.disabled = false;
+      btn.innerHTML = `<i class="fa-solid fa-paper-plane mr-2"></i>送出目擊通報`;
+      renderRecords();
+    }
+
+    // 小測驗邏輯
+    const quizData = [
+      { q: "1. 野外遇到蛇類時，下列何者是最正確的處置方式？", options: ["拿棍棒將其打死", "保持 1.5 公尺以上距離並繞道離開", "試圖用抓蛇夾捕捉", "大聲尖叫手舞足蹈"], ans: 1 },
+      { q: "2. 被毒蛇咬傷時，下列哪一項是絕對「不可」做的錯誤行為？", options: ["脫下戒指與緊身飾品", "記住蛇類體色花紋", "用口吸出毒液或割開傷口", "保持冷靜並獨立撥打 119"], ans: 2 },
+      { q: "3. 「打草驚蛇」在野地健行中的生態意義為何？", options: ["將蛇類吸引過來觀察", "透過震動提醒蛇類避開，避免意外踩踏遭遇", "破壞草叢環境", "測試腳踏杖強度"], ans: 1 },
+      { q: "4. 下列何者「不」屬於台灣常見毒蛇的類型？", options: ["出血性毒", "神經性毒", "混合性毒", "強酸腐蝕毒"], ans: 3 },
+      { q: "5. 蛇類在里山生態系中扮演何種重要角色？", options: ["控制鼠類與害蟲族群的中階掠食者", "毀壞農作物的害蟲", "毫無生態功能的動物", "僅提供觀賞價值"], ans: 0 }
+    ];
+
+    let currentQ = 0;
+    let score = 0;
+
+    function initQuiz() {
+      currentQ = 0;
+      score = 0;
+      showQuestion();
+    }
+
+    function showQuestion() {
+      const q = quizData[currentQ];
+      const container = document.getElementById('quizContainer');
+      container.innerHTML = `
+        <div class="mb-4 flex items-center justify-between text-xs font-bold text-emerald-400">
+          <span>題目 ${currentQ + 1} / ${quizData.length}</span>
+          <span>目前得分：${score}</span>
+        </div>
+        <h3 class="text-lg font-bold text-white mb-6">${q.q}</h3>
+        <div class="space-y-3 mb-6">
+          ${q.options.map((opt, idx) => `
+            <button onclick="checkAnswer(${idx})" class="w-full text-left bg-gray-900 border border-gray-800 hover:border-emerald-600/60 hover:bg-gray-800/80 text-gray-200 text-sm p-4 rounded-xl transition">
+              ${opt}
+            </button>
+          `).join('')}
+        </div>
+      `;
+    }
+
+    function checkAnswer(idx) {
+      if (idx === quizData[currentQ].ans) {
+        score += 20;
+      }
+      currentQ++;
+      if (currentQ < quizData.length) {
+        showQuestion();
+      } else {
+        showResult();
+      }
+    }
+
+    function showResult() {
+      const container = document.getElementById('quizContainer');
+      container.innerHTML = `
+        <div class="text-center py-6">
+          <div class="w-20 h-20 rounded-full bg-emerald-950 border-2 border-emerald-500 flex items-center justify-center mx-auto mb-4 text-emerald-400 text-3xl">
+            <i class="fa-solid fa-award"></i>
+          </div>
+          <h3 class="text-2xl font-bold text-white mb-2">測驗完成！</h3>
+          <p class="text-emerald-400 text-xl font-extrabold mb-4">得分：${score} 分</p>
+          <p class="text-gray-300 text-sm mb-6 max-w-md mx-auto">
+            ${score >= 80 ? '太棒了！您具備極佳的里山蛇類保育與安全防護常識，頒發「里山生態守護者」勳章！' : '感謝參與！建議可以多加溫習遭遇防護守則，一同守護里山野生生態。'}
+          </p>
+          <button onclick="initQuiz()" class="bg-emerald-600 hover:bg-emerald-500 text-white font-bold px-6 py-2.5 rounded-lg text-sm transition">
+            <i class="fa-solid fa-rotate-right mr-2"></i>重新測驗
+          </button>
+        </div>
+      `;
+    }
+  </script>
+</body>
+</html>
